@@ -26,9 +26,12 @@ namespace webApi
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
+        private const string ConnectionString = "server=localhost;user id=root;password=root;database=StudyApi;convert zero datetime=True;pooling=false";
+
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<DataContext>(options => options.UseInMemoryDatabase("Database"));
+
+            services.AddDbContext<DataContext>(options => options.UseMySql(ConnectionString, MySqlServerVersion.LatestSupportedServerVersion ));
             services.AddScoped<DataContext, DataContext>();
             services.AddControllers();
             services.AddSwaggerGen(c =>

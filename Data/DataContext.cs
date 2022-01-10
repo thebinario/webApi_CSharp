@@ -10,6 +10,8 @@ namespace webApi.Data
         
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+
         private const string ConnectionString = "server=localhost;user id=root;password=root;database=StudyApi;convert zero datetime=True;pooling=false";
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

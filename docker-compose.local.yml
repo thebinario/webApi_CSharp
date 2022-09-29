@@ -16,7 +16,7 @@ services:
       - DBHOST=database
       - ASPNETCORE_ENVIRONMENT=Development
   database:
-    image: mysql:8.0.22
+    image: mysql:8.0.30
     container_name: mysqldb
     ports:
       - "3306:3306"

@@ -40,4 +40,10 @@
     <Content Remove="Migrations\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Include="Migrations\20220929043848_migrationInit.cs" />
+    <Compile Include="Migrations\20220929043848_migrationInit.Designer.cs" />
+    <Compile Include="Migrations\DataContextModelSnapshot.cs" />
+  </ItemGroup>
+
 </Project>
